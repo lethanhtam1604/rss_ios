@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+            <title>A simple, clean, and responsive HTML invoice template</title>
+            <style>
+                .invoice-box{
+                    max-width:1000px;
+                    margin:auto;
+                    padding:30px;
+                    /*border:1px solid #eee;*/
+                    /*box-shadow:0 0 10px rgba(0, 0, 0, .15); */
+                    font-size:12px;
+                    line-height:24px;
+                    font-family:'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+                    color:#555;
+                }
+            .custom-fontsize{
+                font-size: 10px;
+            }
+            .invoice-box table{
+                width:100%;
+                line-height:inherit;
+                text-align:left;
+            }
+            
+            .invoice-box table td{
+                padding:5px;
+                vertical-align:top;
+            }
+            
+            .invoice-box table tr td:nth-child(2),.text-right {
+                text-align:right;
+            }
+            .invoice-box table tr.top table td{
+                padding-bottom:20px;
+            }
+            
+            .invoice-box table tr.top table td.title{
+                font-size:30px;
+                line-height:30px;
+                color:#333;
+            }
+            
+            .invoice-box table tr.information table td{
+                padding-bottom:40px;
+            }
+            
+            .invoice-box table tr.heading td{
+                background:#eee;
+                border-bottom:1px solid #ddd;
+                font-weight:bold;
+            }
+            
+            .text-left,.invoice-box table tr.heading td:nth-child(2),.invoice-box table tr.details td:nth-child(2){
+                text-align:left;
+            }
+            .invoice-box table tr.details td{
+                padding-bottom:20px;
+                border:1px solid #ddd;
+            }
+            
+            .invoice-box table tr.item td{
+                border-bottom:1px solid #eee;
+            }
+            
+            .invoice-box table tr.item.last td{
+                border-bottom:none;
+            }
+            
+            .invoice-box table tr.total td:nth-child(2){
+                border-top:2px solid #eee;
+                font-weight:bold;
+            }
+            
+            @media only screen and (max-width: 600px) {
+                .invoice-box table tr.top table td{
+                    width:100%;
+                    display:block;
+                    text-align:center;
+                }
+                
+                .invoice-box table tr.information table td{
+                    width:100%;
+                    display:block;
+                    text-align:center;
+                }
+            }
+            </style>
+            </head>
+    <body>
+        <div class="invoice-box">
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr class="top">
+                        <td colspan="3">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Retail Security Solution LLC<br>375 Bethmour Road<br>Bethany CT 06524</td>
+                                        <td class="title"> <img src="data:image/png;base64,#LOGO_IMAGE#" style="width:100%; max-width:300px; background-color: #ffffff"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td> Order No. RSS-100<br>Report Date: #REPORT_DATE# </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#CLIENT_NAME#<br>#ADDRESS#</td>
+                                        <td>#CONTACT_NAME#<br>Email: #EMAIL#<br>Phone: #PHONE#<br>Mobile: #MOBILE#</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="20%"> <strongclass="custom-fontsize">Job Requirements</strong></td>
+                    </tr>
+                    
+                    <tr class="heading">
+                        <td> Item </td>
+                        <td colspan="2"> Description</td>
+                    </tr>
+                    <tr class="details">
+                        <td> <strong>Job Description </strong></td>
+                        <td colspan="2" >#JOB_DESCRIPTION#</td>
+                    </tr>
+                    <tr class="details">
+                        <td> <strong>Job Location </strong></td>
+                        <td colspan="2">#JOB_LOCATION#</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>Inspection Detail</strong></td>
+                    </tr>
+                    
+                    <tr class="heading">
+                        <td> Item </td>
+                        <td colspan="2"> Description </td>
+                    </tr>
+                    
+                    <tr class="details">
+                        <td> <strong>Inspected By</strong></td>
+                        <td colspan="2">#STAFF_NAME#</td>
+                    </tr>
+                    
+                    <tr class="details">
+                        <td> <strong>Time Arrived</strong></td>
+                        <td colspan="2">#TIME_ARRIVED# minues</td>
+                    </tr>
+                    
+                    <tr class="details">
+                        <td> <strong>End Time</strong></td>
+                        <td colspan="2">#END_TIME# minues</td>
+                    </tr>
+                    
+                    <tr class="details">
+                        <td> <strong>Summary of Job </strong></td>
+                        <td colspan="2">#JOB_SUMMARY#</td>
+                    </tr>
+                    
+                    <tr class="details">
+                        <td> <strong>Narrative of Repair </strong></td>
+                        <td colspan="2">#NARRATIVE_OF_REPAIR#</td>
+                    </tr>
+                    
+                    <tr class="details">
+                        <td> <strong>Is there any follow up required?</strong></td>
+                        <td colspan="2">#FOLLOW_UP_REQUIRED#</td>
+                    </tr>
+                    
+                    <tr class="details">
+                        <td> <strong>Is any part needed?</strong></td>
+                        <td colspan="2">#PART_NEEDED#</td>
+                    </tr>
+                    
+                    <tr class="details">
+                        <td> <strong>Expense Summary </strong></td>
+                        <td colspan="2">#EXPENSE_SUMMARY#</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>Parts Used</strong></td>
+                    </tr>
+                    
+                    <tr class="heading">
+                        <td> Title </td>
+                        <td> Description </td>
+                        <td> Quantity </td>
+                    </tr>
+                    #PARTS#
+                    
+                    <tr>
+                        <td><strong>Photo Before</strong></td>
+                    </tr>
+                    
+                    #PHOTO_BEFORE#
+
+                    <tr>
+                        <td><strong>Photo After</strong></td>
+                    </tr>
+        
+                    #PHOTO_AFTER#
+                    
+                    <tr>
+                        <td><strong>Expense Pictures</strong></td>
+                    </tr>
+
+                    #PHOTO_EXPENSE#
+                    
+                    <tr>
+                        <td><strong><u>Client Signature</u></strong></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="title"> <img src="data:image/png;base64,#PHOTO_SIGNATURE#" style="background-color: #ffffff"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+    </body>
+</html>
